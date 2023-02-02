@@ -39,5 +39,5 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           soft_fail: false
-          hard_fail_on: High:10
+          hard_fail_on: High
     
