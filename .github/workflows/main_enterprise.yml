@@ -4,6 +4,7 @@ on: [push]
 permissions: 
   contents: write
 
+
 jobs:
   scanning:
     name: TruffleHog Enterprise scan
@@ -11,7 +12,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0 # fetch all history so multiple commits can be scanned
       - name: TruffleHog Enterprise scan
         uses: trufflesecurity/TruffleHog-Enterprise-Github-Action@main
