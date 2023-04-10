@@ -1,6 +1,8 @@
 name: TruffleHog Enterprise scan
 
 on: [push]
+permissions: 
+  contents: write
 
 jobs:
   scanning:
